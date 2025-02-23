@@ -23,4 +23,32 @@ func main() {
 	intSlice = append(intSlice, intSlice2...)
 	fmt.Println(intSlice)
 
+	var intSlice3 []int32 = make([]int32, 3)
+	fmt.Println(intSlice3)
+
+	var myMap map[string]uint8 = make(map[string]uint8)
+	fmt.Println(myMap)
+	fmt.Println("--------------------------------------------------")
+
+	var myMap2 = map[string]uint8{"adam": 20, "John": 30}
+	fmt.Println(myMap2)
+	fmt.Println(myMap2["adam"])
+
+	var age, ok = myMap2["adam"]
+
+	fmt.Println(age, ok)
+	if ok {
+		fmt.Printf("adam is %v years old", age)
+	} else {
+		fmt.Println("adam is not in the map")
+	}
+
+	myMap2["adam"] = 30
+	fmt.Println(myMap2)
+
+	for name := range myMap2 {
+		fmt.Printf("Name: %v\n", name)
+		fmt.Printf("Age: %v\n", myMap2[name])
+	}
+
 }
