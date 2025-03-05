@@ -27,7 +27,6 @@ import (
 
 func main() {
 	var thing1 = [5]float64{1,2,3,4,5}
-	fmt.Printf("The memory location of thing1 is: %p", &thing1)
 	fmt.Printf("\nthing1: %v", thing1)
 	var result [5]float64 = square(&thing1)
 	fmt.Printf("\nresult: %v", result)
